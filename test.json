@@ -1,0 +1,6542 @@
+{
+  "Login": {
+    "Summary": "Class for all services",
+    "Returns": "LoginResult",
+    "table": [
+      {
+        "Param Name": "userName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "password",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetUserPermissions": {
+    "Summary": "Login method",
+    "Returns": "UserPermissionsInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationStatusList": {
+    "Summary": "Gets all the attributes and return them in a dictionary",
+    "Returns": "StationStatusInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "notReturnExtendedInfo",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationStatusInfo": {
+    "Summary": "Returns user permissions",
+    "Returns": "StationStatusInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "notReturnExtendedInfo",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationList": {
+    "Summary": "Get Station status info",
+    "Returns": "StationInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "getExtendedInfo",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationTypeList": {
+    "Summary": "Get Station status info",
+    "Returns": "StationTypeInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationTypeInfo": {
+    "Summary": "Get List of stations",
+    "Returns": "StationTypeInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAdaptorTypeList": {
+    "Summary": "Get List of stationRow types",
+    "Returns": "AdaptorTypeInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetLocalStationInfo": {
+    "Summary": "Get stationRow type",
+    "Returns": "StationLocalInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "RebootStation": {
+    "Summary": "Get List of adaptor types",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmStatistic": {
+    "Summary": "Returns Station Info due to input.If empty parameters are used it returns current park.",
+    "Returns": "AlarmStatisticInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "secondaryFaults",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "urgencyLevels",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "AddAlarmComment": {
+    "Summary": "Reboot of station",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ResetAlarm": {
+    "Summary": "Get alarm statistic",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmLogGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commentText",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ResetAllActiveAlarms": {
+    "Summary": "Add comments to alarm",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "incidentText",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmComments": {
+    "Summary": "Reset alarms with GUIDs",
+    "Returns": "AlarmCommentInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmLogGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetLatestAlarmLogSimplyInfos": {
+    "Summary": "Reset all active alarms for specified stationRow",
+    "Returns": "LatestAlarmLogSimplyInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmLogEntry": {
+    "Summary": "Get alarm comments for alarms with GUIDs",
+    "Returns": "AlarmLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmLogGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmLog": {
+    "Summary": "Get latest alarm log infos",
+    "Returns": "AlarmLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmSuppression",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "urgencyLevels",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isHiddenAcknowledged",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isServiceMode",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isCausedStop",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isLiveMode",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filteredAlarmMappings",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filteredErrorNumber",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmLogGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmStatisticWithDowntime": {
+    "Summary": "Get alarm log information",
+    "Returns": "AlarmStatisticWithDowntimeData",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "selectedGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "urgencyLevels",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stopConsequences",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "caseNumber",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmLogCausedStopTree": {
+    "Summary": "Get alarm log",
+    "Returns": "AlarmLogCausedStopNode",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filteredTopAlarmLogGuids",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isLiveMode",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "CreateUpdateAlarmType": {
+    "Summary": "Get alarm statistic with downtime info",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlarmData": {
+    "Summary": "Get alarm which caused stop tree",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetCommandList": {
+    "Summary": "Create or update alarm type created by park optimization engine ",
+    "Returns": "CommandFullInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnCustomData",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnExtendedInfo",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetCommandInfo": {
+    "Summary": "Insert alarm logs generated by park optimization engine",
+    "Returns": "CommandFullInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commandGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnCustomData",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ExecuteCommand": {
+    "Summary": "Get command list for stationRow type",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commandSwName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "parameters",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetCommandStatus": {
+    "Summary": "Get command information      ",
+    "Returns": "CommandStatusInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commandExecutionGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "time",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "timeout",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAvailabilityHistoricalData": {
+    "Summary": "Execute Command",
+    "Returns": "AvailabilityData",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "availabilityType",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "customAvailabilityCategories",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "interval",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetConfigurableParkMonitoringDataBegin": {
+    "Summary": "Get status for specific command",
+    "Returns": "BaseRequest",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "resolution",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "averageCondition",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetConfigurableParkMonitoringDataEnd": {
+    "Summary": "Calculate availability from database variables",
+    "Returns": "ConfigurableParkMonitoringData",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "requestGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetTurbineControlModuleData": {
+    "Summary": "Get configurable park monitoring data begin",
+    "Returns": "ControlModuleDataInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetPowerCurveData": {
+    "Summary": "Get configurable park monitoring data end",
+    "Returns": "PowerCurveData",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UploadPowerCurveData": {
+    "Summary": "Get Control module data",
+    "Returns": "void",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementHistoricalValue": {
+    "Summary": "Result set of ControlModuleDataInfo",
+    "Returns": "DataElementValue",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "function",
+        "Type": "Aggregation",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "functionList",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetTurbineSummaryValue": {
+    "Summary": "Get norm curve data",
+    "Returns": "DataElementValue",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "function",
+        "Type": "Aggregation",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "functionList",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetRepresentationMappingInfo": {
+    "Summary": "UploadNormCurveData",
+    "Returns": "RepresentationMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetCDIGroupList": {
+    "Summary": "Get data element historical value  ",
+    "Returns": "CDIGroupFullInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnCustomData",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetRepresentationGroupListInfo": {
+    "Summary": "Get data element historical value  ",
+    "Returns": "RepresentationGroupListInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementRepresentationList": {
+    "Summary": "Get Representation MappingInfo",
+    "Returns": "DataElementRepresentationFullInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetRepresentationMappingsOnStations": {
+    "Summary": "Get cdi group list",
+    "Returns": "MappingDataElementInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "showEmptyOnly",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationParameterList": {
+    "Summary": "Get representation group list",
+    "Returns": "WTParameterValueInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "onlyNonDefault",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationParameterGroupedList": {
+    "Summary": "Get data elements with their representations list ",
+    "Returns": "WTStationParamaterInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "onlyNonDefault",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationsWithNonDefaultParameterValue": {
+    "Summary": "Get representations with their data elements list ",
+    "Returns": "StationInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementLightWeightList": {
+    "Summary": "Get list of parameter value for stations",
+    "Returns": "DataElementLightWeightInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "cdiTypeGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementFastLog": {
+    "Summary": "Get grouped list of parameter value for stations",
+    "Returns": "StationDataElementLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "resolution",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "utcTime",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteBatchJob": {
+    "Summary": "Get list of stationRow, which have at least one parameter value changed",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetBatchJobList": {
+    "Summary": "Get light weight data element list with paging",
+    "Returns": "BatchJobInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "onlyAlarmJobs",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetBatchJobInfo": {
+    "Summary": "Get Data Element Fast Log with params resolution, timeSlotSize",
+    "Returns": "BatchJobInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "CancelBatchJob": {
+    "Summary": "Delete batch Job",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "StartBatchJob": {
+    "Summary": "Get list of batch jobs",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertBatchJob": {
+    "Summary": "Get batch Job Info",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "methodName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "methodParams",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "outputFormats",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertBatchJobFromTemplate": {
+    "Summary": "Cancel batch Job",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "jobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "relatedAlarmLogGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startJob",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateBatchJob": {
+    "Summary": "Start batch Job",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "methodParams",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "outputFormats",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlarmJobTemplate": {
+    "Summary": "Insert batch Job",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "jobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stopSequence",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "autoStart",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmJobTemplate": {
+    "Summary": "Insert batch Job",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmJobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "jobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stopSequence",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "autoStart",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteAlarmJobTemplate": {
+    "Summary": "Update batch Job",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmJobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertBatchJobTemplate": {
+    "Summary": "Insert alarm job template",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "methodName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "methodParams",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "outputFormats",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateBatchJobTemplate": {
+    "Summary": "Update alarm job template",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "methodParams",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "outputFormats",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteBatchJobTemplate": {
+    "Summary": "Delete alarm job template",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetBatchJobTemplateList": {
+    "Summary": "Insert batch Job template",
+    "Returns": "BatchJobTemplateInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetBatchJobTemplateInfo": {
+    "Summary": "Update batch Job template",
+    "Returns": "BatchJobTemplateInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "batchJobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementScientificLog": {
+    "Summary": "Delete batch Job template",
+    "Returns": "StationDataElementLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "resolution",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "timeSlotSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "function",
+        "Type": "Aggregation",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "functionList",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "utcTime",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementScientificValue": {
+    "Summary": "Get list of batch jobs template",
+    "Returns": "ScientificValueInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "timestamp",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "statusMappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementParametricCurve": {
+    "Summary": "Get batch Job template Info",
+    "Returns": "DependencyLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "valueMappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyResolution",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMinValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMaxValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyGrouping",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyAggregation",
+        "Type": "Aggregation",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "valueAggregation",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyTimeTolerance",
+        "Type": "long",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementParametricCurveTable": {
+    "Summary": "Get Data Element fast log with parameters resolution, timeSlotSize",
+    "Returns": "DependencyTableLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyResolution",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMinValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMaxValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyGrouping",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyAggregation",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyTimeTolerance",
+        "Type": "long",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnResolution",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnMinValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnMaxValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnGrouping",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetWindRose": {
+    "Summary": "Get Data Element last point value",
+    "Returns": "StationWedgeInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "windRoseType",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "productionType",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "wedgeCount",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetPowerCurve": {
+    "Summary": "Gets the data element parametric curve.",
+    "Returns": "PowerCurveGraphInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveType",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "includeStdScatPlotCutOut",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "includeStdPowCurveCutOut",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "minPowerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "maxPowerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetPowerCurveGraph": {
+    "Summary": "Get Data Element Dependency log with parameters",
+    "Returns": "PowerCurveGraphInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyResolution",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMinValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyMaxValue",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyGrouping",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyAggregation",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dependencyTimeTolerance",
+        "Type": "long",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "minPowerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "maxPowerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetTypedPowerCurveGraph": {
+    "Summary": "Get Wind Rose Data",
+    "Returns": "PowerCurveGraphInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveType",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "minPowerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "maxPowerCurveGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementValue": {
+    "Summary": "Get power curve",
+    "Returns": "DataElementValue",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "aggregation",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnFromStation",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SetDataElementValue": {
+    "Summary": "Get Data Element Dependency log with parameters",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "value",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetParameterInfo": {
+    "Summary": "Get Data Element Dependency log with parameters",
+    "Returns": "WTParameterInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "parameterGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnCustomData",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetRepresentationMappingListAllowed": {
+    "Summary": "Get data element value",
+    "Returns": "RepresentationMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "usageType",
+        "Type": "UsageType",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationType",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationGroupGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetRepresentationMappingList": {
+    "Summary": "Set data element value ",
+    "Returns": "RepresentationMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "usageType",
+        "Type": "UsageType",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationType",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetCommandMappingList": {
+    "Summary": "Get parameter information      ",
+    "Returns": "CommandMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmMappingList": {
+    "Summary": "Get list of representation mappings",
+    "Returns": "AlarmMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmMappingWithLocalizationInfo": {
+    "Summary": "Get list of representation mappings",
+    "Returns": "MappingWithLocalizationInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetRepresentationMappingWithLocalizationInfo": {
+    "Summary": "Get list of command mappings",
+    "Returns": "MappingWithLocalizationInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmMappingWithLocalizationList": {
+    "Summary": "Get list of alarm types mappings",
+    "Returns": "MappingWithLocalizationInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetRepresentationMappingWithLocalizationList": {
+    "Summary": "Get Alarm type mapping info",
+    "Returns": "MappingWithLocalizationInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetCapacityFactor": {
+    "Summary": "Get representation mapping mapping info",
+    "Returns": "CapacityFactorInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementValuesTable": {
+    "Summary": "Get list of alarm mappings",
+    "Returns": "DataElementValuesTable",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isHierarchy",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementHistoricalValuesTable": {
+    "Summary": "Get list of representation mappings",
+    "Returns": "DataElementValuesTableResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isHierarchy",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "interval",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "functionList",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertRepresentationMappingUserGroup": {
+    "Summary": "Get List of capacity factor.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "groupName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "groupItemsGuidList",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateRepresentationMappingUserGroup": {
+    "Summary": "Get data element values daily average in table",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "groupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "groupName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "groupItemsGuidList",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteRepresentationMappingUserGroup": {
+    "Summary": "Get data element values daily average in table",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "groupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertCalculatedData": {
+    "Summary": "Inserts new representation mapping group for user",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteAlgorithmGroup": {
+    "Summary": "Updates representation mapping group for user",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "guid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteAllAlgorithmGroups": {
+    "Summary": "Deletes representation mapping group for user",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlgorithmGroup": {
+    "Summary": "Insert data calculated by park optimization engine ",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "guid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "config",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlgorithmGroupList": {
+    "Summary": "Delete algorithm representation group and it`s config",
+    "Returns": "AlgorithmGroupInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertRepresentationMapping": {
+    "Summary": "Delete algorithm representation group and it`s config",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateRepresentationMapping": {
+    "Summary": "Insert algorithm representation group and it`s config",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteRepresentationMapping": {
+    "Summary": "Gets list of algorithm groups",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertCommandMapping": {
+    "Summary": "Project new stations",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commandMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingFilter",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateCommandMapping": {
+    "Summary": "Insert data element representation. Post method.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commandMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingFilter",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteCommandMapping": {
+    "Summary": "Update data element representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commandMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertDataElementRepresentation": {
+    "Summary": "Delete data element representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementRepresentationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlarmMappingWithAlarmJob": {
+    "Summary": "Insert command representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingFilter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "jobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stopSequence",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "autoStart",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmMappingWithAlarmJob": {
+    "Summary": "Update command representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingFilter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmJobTemplateGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "jobTempalteGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stopSequence",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "autoStart",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlarmMapping": {
+    "Summary": "Delete command representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingFilter",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmMapping": {
+    "Summary": "Insert data element representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingFilter",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteAlarmMapping": {
+    "Summary": "Insert alarm type mapping with alarm job",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlarmGroup": {
+    "Summary": "Update alarm type mapping",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "parentAlarmGroupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmGroup": {
+    "Summary": "Insert alarm type representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmGroupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteAlarmGroup": {
+    "Summary": "Update alarm type mapping",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmGroupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmMappingsInGroups": {
+    "Summary": "Insert alarm group",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmMappingsInGroupsList": {
+    "Summary": "Update alarm group",
+    "Returns": "AlarmMappingsWithGroupsInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "parentAlarmGroupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmGroupsList": {
+    "Summary": "Delete alarm group",
+    "Returns": "AlarmGroupInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "showOnlyMainGroups",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmMappingInfo": {
+    "Summary": "Insert alarm into group",
+    "Returns": "AlarmMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmJobTemplateInfo": {
+    "Summary": "Insert alarm into group using POST",
+    "Returns": "AlarmJobTemplateInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlarmGuide": {
+    "Summary": "Boolean result of updating alarm to group",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertAlarmGuideGet": {
+    "Summary": "Get list of alarm mappings in Groups",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "guideContent",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmGuide": {
+    "Summary": "Get list of alarm Groups",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmGuideGet": {
+    "Summary": "Get Alarm type mapping info",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmGuideGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "guideContent",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteAlarmGuide": {
+    "Summary": "Get Alarm job template info",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmGuideGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetAlarmGuideInfo": {
+    "Summary": "Inserts the alarm guide.",
+    "Returns": "AlarmGuideInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmGuideGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateDataElementRepresentation": {
+    "Summary": "Updates the alarm guide.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementRepresentationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteDataElementRepresentation": {
+    "Summary": "Deletes the alarm guide.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementRepresentationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SendApplicationLogsBegin": {
+    "Summary": "Gets the alarm guide information.",
+    "Returns": "BaseRequest",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "message",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "archiveName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SendApplicationLogsEnd": {
+    "Summary": "Entity of <see cref="AlarmGuideInfo" /> type for the given <param name="alarmGuideGuid"></param>",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "requestGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UploadFileToWTC": {
+    "Summary": "Delete data element representation",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "destinationDirectoryPath",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "destinationFileName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "ipAddress",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "uploadUserName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "uploadPassword",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "uploadPortNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "unzipFile",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "performWTCReboot",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "rebootWTCUserName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "rebootWTCPassword",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIndirect",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "base64OfFileContent",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetProgressState": {
+    "Summary": "Send application logs",
+    "Returns": "ProgressData",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "methodName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ConnectStation": {
+    "Summary": "Send application logs end",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DisconnectStation": {
+    "Summary": "Upload File To WTC",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SetSetting": {
+    "Summary": "Upload File To WTC",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "optionName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "currentValue",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "description",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetSetting": {
+    "Summary": "Get Progress State",
+    "Returns": "SWSettingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "optionName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetSettingList": {
+    "Summary": "Connect Park",
+    "Returns": "SWSettingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "onlyNonDefault",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetGroupedSettingList": {
+    "Summary": "Disconnect Station",
+    "Returns": "GroupedUserSettingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "onlyNonDefault",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertTriggerAction": {
+    "Summary": "Set setting in configuration file",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "triggerActionGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "minUrgencyLevel",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "actionConfigData",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "actionType",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "ownerGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mailingInServiceMode",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "causingStop",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "maximumActionPerDay",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "floodDelay",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "floodStopStartTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "floodStopEndTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "algorithm",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateTriggerAction": {
+    "Summary": "Get setting from configuration file",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "triggerActionGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "severity",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "actionConfigData",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "actionType",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "ownerGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mailingInServiceMode",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "causingStop",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "maximumActionPerDay",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "floodDelay",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "floodStopStartTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "floodStopEndTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "algorithm",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteTriggerAction": {
+    "Summary": "Get list with all settings from configuration file",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "triggerActionGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ProjectStation": {
+    "Summary": "Get list with all settings from configuration file",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "latitude",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "longitude",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "url",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commissioningDate",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "order",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "adaptorTypeId",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "configuration",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "navigationGroupGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGroupGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteStation": {
+    "Summary": "Insert new TriggerAction",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertStationType": {
+    "Summary": "Update Trigger Action",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nominalPower",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteStationType": {
+    "Summary": "Delete Trigger Action",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateStation": {
+    "Summary": "Project new stationRow",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "latitude",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "longitude",
+        "Type": "double",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationUrl",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "commissioningDate",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "adaptorTypeId",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "configuration",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "navigationGroupGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGroupGuid",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateStationType": {
+    "Summary": "Delete existing stationRow",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nominalPower",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationTypeData": {
+    "Summary": "Insert new stationRow type",
+    "Returns": "Stream",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertPowerCurve": {
+    "Summary": "Delete existing stationRow type",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveTypeUid",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "data",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isPublic",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdatePowerCurve": {
+    "Summary": "Update existing stationRow",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "name",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveTypeUid",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "data",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isPublic",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeletePowerCurve": {
+    "Summary": "Update existing stationRow type",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetPowerCurveList": {
+    "Summary": "Return uploaded configuration file for given stationRow type",
+    "Returns": "PowerCurveInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetPowerCurveInfo": {
+    "Summary": "Get system logs",
+    "Returns": "PowerCurveInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "powerCurveGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "TriggerWTCUserSynch": {
+    "Summary": "Fetch WTC log files",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "shouldMerge",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetEventLog": {
+    "Summary": "Insert power curve",
+    "Returns": "EventLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventTypeGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "severity",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "excludeEventTypeGuidList",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetEventLogEntry": {
+    "Summary": "Update power curve",
+    "Returns": "EventLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventLogGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetEventTypeList": {
+    "Summary": "Delete power curve",
+    "Returns": "EventTypeInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnCustomData",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetEventTypeInfo": {
+    "Summary": "Get power curve list",
+    "Returns": "EventTypeInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "returnCustomData",
+        "Type": "bool",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetEventLogIndex": {
+    "Summary": "Get power curve data",
+    "Returns": "LogIndexInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventLogGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "relatedElementGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "relatedElementEventTypeGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventTypeGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "Validate": {
+    "Summary": "Trigger Synch WTC Users",
+    "Returns": "void",
+    "table": [
+      {
+        "Param Name": "serviceDescription",
+        "Type": "ServiceDescription",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "serviceHostBase",
+        "Type": "ServiceHostBase",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ApplyDispatchBehavior": {
+    "Summary": "Trigger synchronization",
+    "Returns": "void",
+    "table": [
+      {
+        "Param Name": "serviceDescription",
+        "Type": "ServiceDescription",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "serviceHostBase",
+        "Type": "ServiceHostBase",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertUser": {
+    "Summary": "Get Event Log",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateUser": {
+    "Summary": "Get event type information      ",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ChangePassword": {
+    "Summary": "Get EventLog index",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ConfirmationChangePassword": {
+    "Summary": "Update existing user",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteUser": {
+    "Summary": "Change Password",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "userGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteWTCUser": {
+    "Summary": "Change Password",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "wtcUserGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "ChangeStationOrder": {
+    "Summary": "Delete existing user",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "order",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetUserList": {
+    "Summary": "Delete existing wtcUser",
+    "Returns": "UserInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetWTCUserList": {
+    "Summary": "Change Station Order",
+    "Returns": "WTCUserInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetUserInfo": {
+    "Summary": "Get list of Users",
+    "Returns": "UserInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "userGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "userName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetWTCUserInfo": {
+    "Summary": "Get list of WTCUsers",
+    "Returns": "WTCUserInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "wtcUserGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertLoginPROEUser": {
+    "Summary": "Gets User Information",
+    "Returns": "LoginResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "username",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "newUserPwd",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertSMSUser": {
+    "Summary": "Gets WTCUser Information",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SendSMSUser": {
+    "Summary": "Inserts and logins PRO-Engine dedicated user.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateSMSUser": {
+    "Summary": "Send insert",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetSMSUserList": {
+    "Summary": "Update existing sendsmsuser",
+    "Returns": "SMSUserInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteSMSUser": {
+    "Summary": "Get list of SMSUsers",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "userName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetTriggerActionList": {
+    "Summary": "Delete existing SMSuser",
+    "Returns": "TriggerActionInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetTriggerActionInfo": {
+    "Summary": "Get TriggerActions list",
+    "Returns": "TriggerActionInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "triggerActionGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertMailReport": {
+    "Summary": "Get trigger action info",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mailReportGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "reportName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmsExclude",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "comments",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmsMaxCount",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmsMinUrgencyLevel",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventsExclude",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventsMaxCount",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventsMinSeverityLevel",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeAlarms",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeAvailability",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeEvents",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeProduction",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeStatus",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "recipientList",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "reportedPeriod",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isScheduled",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "subject",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateMailReport": {
+    "Summary": "Insert mail report",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mailReportGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "reportName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmsExclude",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "comments",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmsMaxCount",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmsMinUrgencyLevel",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventsExclude",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventsMaxCount",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "eventsMinSeverityLevel",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeAlarms",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeAvailability",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeEvents",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeProduction",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isIncludeStatus",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "recipientList",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "reportedPeriod",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "isScheduled",
+        "Type": "bool",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "subject",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteMailReport": {
+    "Summary": "Update mail report",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mailReportGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetMailReportList": {
+    "Summary": "Delete mail report",
+    "Returns": "MailReportSimpleInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetMailReportInfo": {
+    "Summary": "Get Mail Report List",
+    "Returns": "MailReportInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mailReportGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SendMailReport": {
+    "Summary": "Get Mail Report Info",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mailReportGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "sendNowAlarmsInclude",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "sendNowEventsInclude",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementScientificLogBegin": {
+    "Summary": "Send Mail Report",
+    "Returns": "BaseRequest",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "hierarchyTypeNumber",
+        "Type": "HierarchyTypeNumber",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "resolution",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "timeSlotSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "duration",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "function",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "functionList",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "nickName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementScientificLogEnd": {
+    "Summary": "Get Data Element Scientific log with parameters resolution, timeSlotSize",
+    "Returns": "StationDataElementLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "requestGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementFastLogBegin": {
+    "Summary": "Get Data Element Scientific log with parameters resolution, timeSlotSize",
+    "Returns": "BaseRequest",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "resolution",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "startTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "endTime",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetDataElementFastLogEnd": {
+    "Summary": "Get Data Element Fast Log with params resolution, timeSlotSize",
+    "Returns": "StationDataElementLogInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "mappingGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "dataElementGuid",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "requestGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "CancelParkRequest": {
+    "Summary": "Get Data Element Scientific log with parameters resolution, timeSlotSize",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "requestGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetParkRequests": {
+    "Summary": "CancelParkRequest",
+    "Returns": "BaseRequest",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetParkRequest": {
+    "Summary": "GetParkRequests",
+    "Returns": "BaseRequest",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "requestGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateAlarmMappingLocalization": {
+    "Summary": "GetParkRequest",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "alarmMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "translatedName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateRepresentationMappingLocalization": {
+    "Summary": "Update alarmmapping localization",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "representationMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "localizationGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "translatedName",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetLocalizationList": {
+    "Summary": "Update representation mapping localization",
+    "Returns": "LocalizationInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SetOPCDataElementMapping": {
+    "Summary": "Get list of localizations",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "iec61400DataElementMappingId",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "currentDataElementMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "RevertOPCDataElementMapping": {
+    "Summary": "Check whether park service alive.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "iec61400DataElementMappingId",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetIEC61400DataElementMappingList": {
+    "Summary": "Sets data element Id for IEC61400DataElementMapping",
+    "Returns": "IEC61400DataElementMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SetOPCCommandMapping": {
+    "Summary": "Reverts data element Id for IEC61400DataElementMapping to default",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "iec61400CommandMappingId",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "currentCommandMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "RevertOPCCommandMapping": {
+    "Summary": "Get list of all DataElement mappings.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "iec61400CommandMappingId",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetIEC61400CommandMappingList": {
+    "Summary": "Sets data element Id for IEC61400CommandMapping",
+    "Returns": "IEC61400CommandMappingInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageNumber",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "pageSize",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "filter",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "orderBy",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "start",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "limit",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "SetOPCCommandParameter": {
+    "Summary": "Reverts data element Id for IEC61400CommandMapping to default",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "iec61400CommandMappingId",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "currentCommandParameter",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertOPCMapping": {
+    "Summary": "Get list of all Command mappings.",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "opcClass",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "opcName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "defaultMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "currentMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "description",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "UpdateOPCMapping": {
+    "Summary": "Sets command parameter",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "iec61400DataElementMappingId",
+        "Type": "int",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "opcClass",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "opcName",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "defaultMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "currentMappingGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "description",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteOPCMapping": {
+    "Summary": "Insert OPC mapping",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "iec61400DataElementMappingId",
+        "Type": "int",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertUpdateStationGroup": {
+    "Summary": "Update OPC mapping",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "request",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteStationGroup": {
+    "Summary": "Delete OPC mapping",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGroupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationGroupList": {
+    "Summary": "Start OPC XML DA Server",
+    "Returns": "StationGroupInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetStationGroupInfo": {
+    "Summary": "Stop OPC XML DA Server",
+    "Returns": "StationGroupInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stationGroupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetUserStationGroupList": {
+    "Summary": "Get OPC XML DA Server Status",
+    "Returns": "StationGroupInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "userGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "InsertUpdateNavigationGroup": {
+    "Summary": "Register OPC DA Server",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "stream",
+        "Type": "Stream",
+        "Param summary": ""
+      }
+    ]
+  },
+  "DeleteNavigationGroup": {
+    "Summary": "UnRegister OPC DA Server",
+    "Returns": "MethodResult",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      },
+      {
+        "Param Name": "groupGuid",
+        "Type": "Guid",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetNavigationGroupList": {
+    "Summary": "Get OPC DA Server Status",
+    "Returns": "NavigationGroupInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  },
+  "GetNavigationStructure": {
+    "Summary": "Inserts new station group to database",
+    "Returns": "NavigationGroupInfo",
+    "table": [
+      {
+        "Param Name": "userKey",
+        "Type": "string",
+        "Param summary": ""
+      }
+    ]
+  }
+}
