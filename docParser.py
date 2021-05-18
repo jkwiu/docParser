@@ -26,19 +26,22 @@ def color_row(row=0):
 # logic 처리 귀찮아서 class 밑부분의 public 시작하는 부분을 수동으로 라인넘버 할당해줘야함 ㅠㅠ 변수는 initialStartLine
 ################################################### 주의 사항 ##########################################################
 
+
 # Config Variables
 # fileName = 'UserService'
-fileName = 'TriggerActionService'
+# fileName = 'TriggerActionService'
+fileName = 'StatusService'
 # fileName = 'ParkService'
 # initialStartLine = 30
-initialStartLine = 20
+# initialStartLine = 20
+initialStartLine = 6
 
-if os.path.exists(fileName+'.docx'):
-    os.remove(fileName+'.docx')
+if os.path.exists('./document/'+fileName+'.docx'):
+    os.remove('./document/'+fileName+'.docx')
 else:
     print('The file does not exist')
 
-pubExpPattern = 'public [\w]+[\<\w\>]+ [\w]+[\(][\w\s\,]+[\)]'
+pubExpPattern = 'public [\w]+[\<\w\>]+ [\w]+[\(\w\s\,\)]+'
 priExpPattern = 'private [\w]+[\<\w\>]+ [\w]+[\(][\w\s\,]+[\)]'
 
 returnExpPattern = 'public [\w]+[\<\w\>]+'
@@ -48,7 +51,7 @@ paramSmryExpPattern = '[\/]+ [\<]param.*'
 paramSmryDelExpPattern = '[\"][\w]+[\"][\>]'
 summaryExpPattern = '[\/]+ [a-zA-Z\s]+.*'
 
-with open(fileName+'.cs', encoding='utf8') as f:
+with open('./code/'+fileName+'.cs', encoding='utf8') as f:
     lines = f.read().split("\n")
 
 # Dictionary
@@ -209,4 +212,4 @@ for name in dicNameArr:
     doc.add_paragraph(' ')
 
 
-doc.save(fileName+'.docx')
+doc.save('./document/'+fileName+'.docx')
