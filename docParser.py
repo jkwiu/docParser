@@ -1,9 +1,10 @@
+from os import walk
+import re
+import os
 from docx.shared import Inches
 from docx import Document
 from docx.oxml.ns import nsdecls
 from docx.oxml import parse_xml
-import re
-import os
 
 
 def make_rows_bold(*rows):
@@ -22,194 +23,144 @@ def color_row(row=0):
             r'<w:shd {} w:fill="1F5C8B"/>'.format(nsdecls('w')))
         cell._tc.get_or_add_tcPr().append(shading_elm_2)
 
-################################################### 주의 사항 ##########################################################
-# logic 처리 귀찮아서 class 밑부분의 public 시작하는 부분을 수동으로 라인넘버 할당해줘야함 ㅠㅠ 변수는 initialStartLine
-################################################### 주의 사항 ##########################################################
 
+path = './code/'
 
-# Config Variables
-# fileName = 'UserService'
-# fileName = 'TriggerActionService'
-fileName = 'StatusService'
-# fileName = 'ParkService'
-# initialStartLine = 30
-# initialStartLine = 20
-initialStartLine = 6
+_, _, fileNames = next(walk(path))
 
-if os.path.exists('./document/'+fileName+'.docx'):
-    os.remove('./document/'+fileName+'.docx')
-else:
-    print('The file does not exist')
+for fileName in fileNames:
+    fileName = fileName.replace('.cs', '')
+    if os.path.exists('./document/'+fileName+'.docx'):
+        os.remove('./document/'+fileName+'.docx')
+    else:
+        print('The file does not exist')
 
-pubExpPattern = 'public [\w]+[\<\w\>]+ [\w]+[\(\w\s\,\)]+'
-priExpPattern = 'private [\w]+[\<\w\>]+ [\w]+[\(][\w\s\,]+[\)]'
+    with open('./code/'+fileName+'.cs', encoding='utf8') as f:
+        lines = f.read().split("\n")
 
-returnExpPattern = 'public [\w]+[\<\w\>]+'
-funcNameExpPattern = '[\w]+[\(][\w\s\,]+[\)]'
-paramExpPattern = '[\(][\w\s\,]+[\)]'
-paramSmryExpPattern = '[\/]+ [\<]param.*'
-paramSmryDelExpPattern = '[\"][\w]+[\"][\>]'
-summaryExpPattern = '[\/]+ [a-zA-Z\s]+.*'
+    # 초기 세팅
+    initialStartLine = 0
+    dic = {}
+    params = {}
+    smryKeyword = ''
+    smryReadOn = False
+    paramSmryReadOn = False
 
-with open('./code/'+fileName+'.cs', encoding='utf8') as f:
-    lines = f.read().split("\n")
+    # initialStartLine 찾기
+    for i in range(0, len(lines)):
+        line = lines[i].lstrip()
+        classLine = line.split(' ')
+        if classLine[0] == 'public' and classLine[1] == 'class':
+            initialStartLine = i+1
 
-# Dictionary
-dicName = ''
-dicNameArr = []
-summaryArr = []
-paramSummaryArr = []
+    for i in range(initialStartLine, len(lines)):
+        # Summary Keyword 추출
+        line = lines[i].lstrip().split(' ')
+        if smryReadOn:
+            if lines[i] != '':
+                smryKeyword = lines[i]
+                smryKeyword = smryKeyword.replace(
+                    '///', '').replace('</summary>', '').lstrip()
+                smryReadOn = False
+        # Param Summary 추출
+        if len(line) > 1:
+            if line[1] == '<summary>':
+                smryReadOn = True
+            elif line[1] == '<param':
+                paramNameExp = '\"[a-zA-Z]+\"'
+                paramNameList = re.findall(paramNameExp, lines[i])
+                if len(paramNameList) > 0:
+                    paramName = paramNameList[0].replace("\"", "")
+                    paramSmry = lines[i].lstrip().replace(
+                        '<param name="' + paramName+'">', '').replace('</param>', '').replace('///', '')
+                    params[paramName] = {
+                        'Param Summary': paramSmry,
+                    }
 
-isFunction = False
-dic = {
-    # 'Name': {
-    #     'Summary': '',
-    #     'Returns': '',
-    #     'table': [],
-    # }
-}
-dicTbl = {
-    # 'Param Name': '',
-    # 'Type': '',
-    # 'Param summary': '',
-}
+        # Function 추출
+        if line[0] == 'public' and line[1] != 'class':
+            funcName = ''
+            returnName = ''
+            paramType = ''
+            functionNameIdx = 0
+            for idx in range(0, len(line)):
+                functionLines = line[idx]
+                for key in functionLines:
+                    if key == "(":
+                        functionNameIdx = idx
+                        break
+            # Function Name 추출
+            funcNames = line[functionNameIdx]
+            for key in funcNames:
+                if key == "(":
+                    break
+                funcName += key
+            # Return Name 추출
+            for idx in range(1, functionNameIdx):
+                returnName += line[idx] + ' '
+            # Param Type 추출
+            for idx in range(functionNameIdx, len(line)):
+                paramType += line[idx] + ' '
+            paramType = paramType.replace(funcName + '(', '').replace(')', '')
+            paramsList = paramType.split(',')
+            for idx in range(0, len(paramsList)):
+                paramsList[idx] = paramsList[idx].lstrip().rstrip()
+            for key in paramsList:
+                paramPair = key.split(' ')
+                if len(paramPair) > 1:
+                    if paramPair[1] in params:
+                        params[paramPair[1]]['Type'] = paramPair[0]
 
-for i, line in enumerate(lines):
-
-    # 1. 핵심 키워드를 추출한다.
-    # 2. 키워드에서 Returns, Parameter, function  name을 나눈고, 해당 키워드들을 dictionary에 넣는다.
-    # 3. dictionary로부터 word 문서 테이블을 만든다.
-    keyword = re.findall(pubExpPattern, line)
-    if len(keyword) > 0:
-        isFunction = True
-        # Function name 값
-        funcNameKeywordArr = re.findall(funcNameExpPattern, keyword[0])
-        isGgwal = True
-        filteredFuncNameKeyword = ''
-        for k in funcNameKeywordArr[0]:
-            if k == '(':
-                isGgwal = False
-                continue
-            if isGgwal:
-                filteredFuncNameKeyword += k
-        dicName = filteredFuncNameKeyword
-        if dicName in dic:
-            dicName += '_chk'
-            dic[dicName] = {
-                'Summary': '',
-                'Returns': '',
-                'table': [],
+            # 전체 키워드 취합
+            dic[funcName] = {
+                'Summary': smryKeyword.lstrip().rstrip(),
+                'Returns': returnName.lstrip().rstrip(),
+                'Params': params,
             }
-        else:
-            dic[dicName] = {
-                'Summary': '',
-                'Returns': '',
-                'table': [],
-            }
-        dicNameArr.append(dicName)
-        # Returns 값
-        returnKeywordArr = re.findall(returnExpPattern, keyword[0])
-        returnKeyword = returnKeywordArr[0].split(' ')
-        # print(returnKeyword[1])
-        isGguk = False
-        noGguk = True
-        filteredReturnKeyword = ''
-        for k in returnKeyword[1]:
-            if noGguk:
-                filteredReturnKeyword += k
-            if k == '<':
-                isGguk = True
-                noGguk = False
-                filteredReturnKeyword = ''
-                continue
-            elif k == '>':
-                isGguk = False
-                continue
-            if isGguk:
-                filteredReturnKeyword += k
-        dic[dicName]['Returns'] = filteredReturnKeyword
-        # Parameter 값
-        paramKeywordArr = re.findall(paramExpPattern, keyword[0])
-        filteredParamKeywordArr = paramKeywordArr[0].replace(
-            '(', '').replace(')', '').split(',')
-        # print(filteredParamKeywordArr)
-        for i in range(0, len(filteredParamKeywordArr)):
-            dicTbl = {
-                'Param Name': filteredParamKeywordArr[i].lstrip().split(' ')[1],
-                'Type': filteredParamKeywordArr[i].lstrip().split(' ')[0],
-                'Param summary': '',
-            }
-            dic[dicName]['table'].append(dicTbl)
+            params = {}
 
+            # word 문서 작성
+            doc = Document()
 
-# Parameter Summary 값
-for i, line in enumerate(lines):
-    if i > initialStartLine:
-        paramSummaryKeywordArr = re.findall(paramSmryExpPattern, line)
-        if len(paramSummaryKeywordArr) > 0:
-            filteredSummaryKeywordArr = paramSummaryKeywordArr[0].replace(
-                '/// ', '').replace('<param name=', '').replace('</param>', '')
-            filteredSummaryKeyword = re.findall(
-                paramSmryDelExpPattern, filteredSummaryKeywordArr)
-            paramSummaryArr.append(
-                filteredSummaryKeywordArr.replace(
-                    filteredSummaryKeyword[0], ''))
+            # 테이블 그리기
+            for name in dic:
+                parmLength = 0
+                for paramName in dic[name]['Params']:
+                    if 'Type' in dic[name]['Params'][paramName]:
+                        parmLength += 1
+                # rowLength = len(dic[name]['Params'])+4
+                table = doc.add_table(
+                    rows=parmLength+4, cols=3, style='TableGrid')
+                # 기본 테이블 설정
+                table.cell(0, 1).merge(table.cell(0, 2))
+                table.cell(1, 1).merge(table.cell(1, 2))
+                table.cell(2, 1).merge(table.cell(2, 2))
+                cell_1 = table.rows[0].cells
+                cell_2 = table.rows[1].cells
+                cell_3 = table.rows[2].cells
+                cell_4 = table.rows[3].cells
 
-# Summary 값
-for i, line in enumerate(lines):
-    if i > initialStartLine:
-        summaryKeyword = re.findall(summaryExpPattern, line)
-        if len(summaryKeyword) > 0:
-            filteredSummaryKeyword = (summaryKeyword[0].replace(
-                '///  ', '')).replace('/// ', '')
-            summaryArr.append(filteredSummaryKeyword)
-for i in range(0, len(dicNameArr)):
-    dic[dicNameArr[i]]['Summary'] = summaryArr[i]
-for i in range(0, len(dicNameArr)):
-    # dic[dicNameArr[i]]['table'] = paramSummaryArr[i]
-    for j in range(0, len(dic[dicNameArr[i]]['table'])):
-        if len(paramSummaryArr) > 0:
-            dic[dicNameArr[i]]['table'][j]['Param summary'] = paramSummaryArr[0]
-            paramSummaryArr.pop(0)
+                cell_1[0].text = "Name"
+                cell_2[0].text = "Summary"
+                cell_3[0].text = "Returns"
+                cell_4[0].text = "Param Name"
+                cell_4[1].text = "Type"
+                cell_4[2].text = "Param Summary"
+                make_rows_bold(table.rows[0], table.rows[1],
+                               table.rows[2], table.rows[3])
 
-# print(dic)
+                # 값 입력
+                cell_1[1].text = name
+                cell_2[1].text = dic[name]['Summary']
+                cell_3[1].text = dic[name]['Returns']
+                i = 0
+                for paramName in dic[name]['Params']:
+                    if 'Type' in dic[name]['Params'][paramName]:
+                        cell = table.rows[i+4].cells
+                        cell[0].text = paramName
+                        cell[1].text = dic[name]['Params'][paramName]['Type']
+                        cell[2].text = dic[name]['Params'][paramName]['Param Summary']
+                        i += 1
+                doc.add_paragraph(' ')
 
-
-# word 문서 작성
-doc = Document()
-
-# 테이블 그리기
-for name in dicNameArr:
-    rowLength = len(dic[name]['table'])+4
-    table = doc.add_table(rows=rowLength, cols=3, style='TableGrid')
-    # 기본 테이블 설정
-    table.cell(0, 1).merge(table.cell(0, 2))
-    table.cell(1, 1).merge(table.cell(1, 2))
-    table.cell(2, 1).merge(table.cell(2, 2))
-    cell_1 = table.rows[0].cells
-    cell_2 = table.rows[1].cells
-    cell_3 = table.rows[2].cells
-    cell_4 = table.rows[3].cells
-
-    cell_1[0].text = "Name"
-    cell_2[0].text = "Summary"
-    cell_3[0].text = "Returns"
-    cell_4[0].text = "Param Name"
-    cell_4[1].text = "Type"
-    cell_4[2].text = "Param Summary"
-    make_rows_bold(table.rows[0], table.rows[1], table.rows[2], table.rows[3])
-
-    # 값 입력
-    cell_1[1].text = name
-    cell_2[1].text = dic[name]['Summary']
-    cell_3[1].text = dic[name]['Returns']
-    for i in range(0, len(dic[name]['table'])):
-        cell = table.rows[i+4].cells
-        cell[0].text = dic[name]['table'][i]['Param Name']
-        cell[1].text = dic[name]['table'][i]['Type']
-        cell[2].text = dic[name]['table'][i]['Param summary']
-        # print(dic[name]['table'][i])
-    doc.add_paragraph(' ')
-
-
-doc.save('./document/'+fileName+'.docx')
+            doc.save('./document/'+fileName+'.docx')
