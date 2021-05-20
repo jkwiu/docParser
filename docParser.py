@@ -47,12 +47,23 @@ for fileName in fileNames:
     paramSmryReadOn = False
 
     # initialStartLine 찾기
+    className = ''
     for i in range(0, len(lines)):
         line = lines[i].lstrip()
         classLine = line.split(' ')
         if classLine[0] == 'public' and classLine[1] == 'class':
-            initialStartLine = i+1
-
+            className = classLine[2]
+            break
+    for i in range(0, len(lines)):
+        consFuncName = ''
+        line = lines[i].lstrip()
+        consLine = line.split(' ')
+        if len(consLine) > 1:
+            for c in consLine[1]:
+                consFuncName += c
+                if consFuncName == className:
+                    initialStartLine = i + 1
+                    break
     for i in range(initialStartLine, len(lines)):
         # Summary Keyword 추출
         line = lines[i].lstrip().split(' ')
