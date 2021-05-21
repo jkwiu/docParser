@@ -119,8 +119,14 @@ for fileName in fileNames:
             for key in paramsList:
                 paramPair = key.split(' ')
                 if len(paramPair) > 1:
+                    # param summary가 있으면 Type을 추가해주고 없으면, 빈 값을 넣어준다.
                     if paramPair[1] in params:
                         params[paramPair[1]]['Type'] = paramPair[0]
+                    else:
+                        params[paramPair[1]] = {
+                            'Type': paramPair[0],
+                            'Param Summary': '',
+                        }
 
             # 전체 키워드 취합
             dic[funcName] = {
